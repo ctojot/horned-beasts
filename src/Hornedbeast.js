@@ -4,7 +4,7 @@ import HornedBeastCard from './HornedBeastCard';
 // import './Hornedbeast.css';
 
 
-class Hornedbeast extends React.Component {
+class HornedBeast extends React.Component {
     constructor(props){
         super(props);
 
@@ -31,4 +31,4 @@ class Hornedbeast extends React.Component {
     
 }
 
-export default Hornedbeast;
+export default HornedBeast;
