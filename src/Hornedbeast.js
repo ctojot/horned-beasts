@@ -1,18 +1,32 @@
 import React from 'react';
+import HornedBeastCard from './HornedBeastCard';
 
 
 class Hornedbeast extends React.Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            votes: 0
+        }
+
+    }
+    
+    handleVotes = () => {
+        this.setState({
+            votes: this.state.votes + 1
+        })
+    }
+    
     render(){
         return(
             <>
-                <h2>
-                    <p>{this.props.title}</p>
-                </h2>
-                <img src={this.props.img_url} alt={this.props.title} title={this.props.title}></img>
-                <p>{this.props.description}</p>
+                <HornedBeastCard title={this.props.title} votes={this.state.votes} description={this.props.description} image_url={this.props.image_url} handleVotes={this.handleVotes} />
             </>
+            
         )
     }
+    
 }
 
 export default Hornedbeast;
