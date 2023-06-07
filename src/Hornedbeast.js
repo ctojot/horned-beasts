@@ -1,5 +1,7 @@
 import React from 'react';
-import './Hornedbeast.css'
+import HornedBeastCard from './HornedBeastCard';
+
+// import './Hornedbeast.css';
 
 
 class Hornedbeast extends React.Component {
@@ -7,27 +9,26 @@ class Hornedbeast extends React.Component {
         super(props);
 
         this.state = {
-            waves: 0
+            votes: 0
         }
 
     }
     
-    handleWave = () => {
+    handleVotes = () => {
         this.setState({
-            waves: this.state.waves + 1
+            votes: this.state.votes + 1
         })
     }
     
     render(){
         return(
             <>
-                <h2><p>{this.props.title}</p></h2>
-                <p onClick={}></p>
-                <img src={this.props.img_url} alt={this.props.title} title={this.props.title}></img>
-                <p>{this.props.description}</p>
+                <HornedBeastCard title={this.props.title} votes={this.state.votes} description={this.props.description} image_url={this.props.image_url} handleVotes={this.handleVotes} />
             </>
+            
         )
     }
+    
 }
 
 export default Hornedbeast;

@@ -68,3 +68,76 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Number and name of feature
+
+Feature 1: Display Images
+
+Given that a user opens the application in the browser
+When the user navigates to the home page
+Then the photo gallery should display all of the beasts' images in the gallery.
+
+### Estimate of time needed to complete
+
+30 minutes
+
+### Start time
+
+6:00 p.m.
+
+### Finish time
+
+7:00 p.m.
+
+### Actual time needed to complete
+
+1 Hour
+
+## Number and name of feature
+
+Feature 2: Allow Users to Favorite Individual Beasts
+
+Given that a user opens the application in the browser
+When a user clicks on an image of a beast
+Then the number of "Favorites" displayed on that beast will increase by one.
+
+
+### Estimate of time needed to complete
+
+1 Hour and 30 minutes
+
+### Start time
+
+7:00 p.m.
+
+### Finish time
+
+8:00 p.m.
+
+### Actual time needed to complete
+
+1 hour
+
+## Number and name of feature
+
+Feature 3: Bootstrap
+
+Given that a user opens the application in the browser
+When the images are displayed on the screen
+Then each image should be rendered in a visually pleasing way: in columns, as screen width allows.
+
+### Estimate of time needed to complete
+
+1 hour
+
+### Start time
+
+8:00 p.m.
+
+### Finish time
+
+9:00 p.m.
+
+### Actual time needed to complete
+
+1 hour
