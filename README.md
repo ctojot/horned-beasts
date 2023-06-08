@@ -141,3 +141,27 @@ Then each image should be rendered in a visually pleasing way: in columns, as sc
 ### Actual time needed to complete
 
 1 hour
+
+## Number and name of feature
+
+Feature 4: Display a Modal
+
+Given that a user wants to view the details of the image
+When the user clicks on an individual image
+Then the image should render larger on the screen with the description displayed
+
+### Estimate of time needed to complete
+
+1 hour and 30 min
+
+### Start time
+
+6:00 p.m.
+
+### Finish time
+
+7:00 p.m.
+
+### Actual time needed to complete
+
+1 Hour
