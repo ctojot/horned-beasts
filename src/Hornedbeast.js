@@ -2,6 +2,7 @@ import React from 'react';
 import HornedBeastCard from './HornedBeastCard';
 
 
+
 class Hornedbeast extends React.Component {
     constructor(props){
         super(props);
@@ -18,15 +19,22 @@ class Hornedbeast extends React.Component {
         })
     }
     
-    render(){
+    render() {
+        const {image_url, title, description} = this.props
         return(
             <>
-                <HornedBeastCard title={this.props.title} votes={this.state.votes} description={this.props.description} image_url={this.props.image_url} handleVotes={this.handleVotes} />
+                <HornedBeastCard 
+                title={title}
+                votes={this.state.votes}
+                description={description}
+                image_url={image_url}
+                handleVotes={this.handleVotes}
+                handleOpenModal={this.props.handleOpenModal}
+                />
             </>
             
         )
     }
-    
 }
 
 export default Hornedbeast;

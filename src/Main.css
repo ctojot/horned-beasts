@@ -1,5 +1,7 @@
 main {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    margin-left: 45px;
+    margin-right: 45px;
 }
