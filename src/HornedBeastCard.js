@@ -12,7 +12,7 @@ class HornedBeastCard extends React.Component  {
       }
     
     render() {
-        const {image_url, title, description, votes, handleVotes} = this.props
+        const {image_url, title, description, votes, horns, handleVotes} = this.props
         return (
             <>
             <Card style={{ width: '18rem', marginTop: '20px', marginLeft: '20px', marginRight: '20px' }}>
@@ -21,6 +21,7 @@ class HornedBeastCard extends React.Component  {
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>Votes: {votes}</Card.Text>
                 <Card.Text>{description}</Card.Text>
+                <Card.Text>Number of horns: {horns}</Card.Text>
                 <Card.Text style={{marginTop : 25}}>Click on an image or click the button to vote for your favorite Horned Beast!</Card.Text>
                 <Button variant="primary" onClick={handleVotes}>Vote!</Button>
                 </Card.Body>

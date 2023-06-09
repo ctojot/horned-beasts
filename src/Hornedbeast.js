@@ -1,8 +1,6 @@
 import React from 'react';
 import HornedBeastCard from './HornedBeastCard';
 
-
-
 class Hornedbeast extends React.Component {
     constructor(props){
         super(props);
@@ -20,7 +18,7 @@ class Hornedbeast extends React.Component {
     }
     
     render() {
-        const {image_url, title, description} = this.props
+        const {image_url, title, description, horns} = this.props
         return(
             <>
                 <HornedBeastCard 
@@ -28,6 +26,7 @@ class Hornedbeast extends React.Component {
                 votes={this.state.votes}
                 description={description}
                 image_url={image_url}
+                horns={horns}
                 handleVotes={this.handleVotes}
                 handleOpenModal={this.props.handleOpenModal}
                 />
