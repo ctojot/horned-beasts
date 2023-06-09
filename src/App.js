@@ -4,18 +4,20 @@
 import React from 'react';
 import Header from './Header';
 import Main from './Main';
-import Footer from './Footer'
+import Footer from './Footer';
 import SelectedBeast from './SelectedBeast';
-import data from './data/data.json'
+import data from './data/data.json';
+
 
 // 2ND IMPORT
 class App extends React.Component {
+  
   constructor(props){
     super(props)
     this.state={
         showModal: false,
         selectedBeast: {},
-
+        selectedHorns: "0"
     }
   }
 
@@ -33,13 +35,38 @@ class App extends React.Component {
     })
   }
 
+  handleSetSelectedHorns = (event) => {
+    let selected = event.target.value;
+    this.setState({
+      selectedHorns: selected
+    })
+
+  }
+
   render() {
+    const sortedData = data.filter(element => {
+      console.log(this.state.selectedHorns, element.horns)
+      if (this.state.selectedHorns === "0") {
+        return true;
+      }
+      else if (this.state.selectedHorns === `${element.horns}`) {
+        return true;
+      }
+      else {
+        return false;
+      }
+
+    })
+
     return (
       <>
-        <Header />
+        <Header 
+          handleSetSelectedHorns={this.handleSetSelectedHorns}
+          
+        />
         <Main 
           handleOpenModal={this.handleOpenModal}
-          data={data}
+          data={sortedData}
         />
         <SelectedBeast 
           selectedBeast={this.state.selectedBeast}
@@ -54,4 +81,3 @@ class App extends React.Component {
 
 // 3RD EXPORT THE CLASS FOR OTHER FILES TO USE IT
 export default App;
-
